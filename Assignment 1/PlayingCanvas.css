@@ -1,0 +1,28 @@
+/*
+Stduent1 : Jisoo Lee(994584927)
+Student2 : MinSu Kevin Cho(996662543)
+*/
+body{
+	font-size: medium;
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	margin: 0px;
+}
+canvas{
+	cursor:crosshair;
+	margin:0px 0 0 0;
+	-webkit-box-shadow:2px 1px 20px #ccc;
+	-moz-box-shadow:1px 1px 20px #ccc;
+	box-shadow:1px 1px 20px #ccc;
+}
+div{
+	position:absolute;
+	top:0px;
+	left:0px;
+	margin:0px;
+	padding:0px;
+}
+input[type=button]{
+	width: 65px;
+	font-size: 14px;
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}

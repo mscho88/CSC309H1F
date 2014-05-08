@@ -1,0 +1,32 @@
+body{
+	font-family:"Courier New", Courier, monospace;
+	font-size:20px;
+}
+label{
+	margin-left: 150px;
+} 
+input[type="text"], input[type="password"], input[type="submit"], input[type="button"]{
+	display: block;
+	margin-left: 200px;
+	margin-bottom: 20px;
+	width: 300px;
+}
+input[type="submit"], input[type="button"]{
+	width: 310px;
+	height: 30px;
+	border-top-left-radius: 38px;
+	border-bottom-right-radius: 38px;
+	font-family:"Courier New", Courier, monospace;
+}
+input[type="button"]{
+	width: 160px;
+	margin-left: 275px;
+}
+p{
+	margin-left: 180px;
+}
+
+#captcha{
+	display: block;
+	margin: 0 auto;
+}

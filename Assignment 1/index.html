@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<!--Stduent1 : Jisoo Lee(994584927)
+Student2 : MinSu Kevin Cho(996662543)-->
+
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Playing Canvas</title>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<link rel="stylesheet" type="text/css" href="PlayingCanvas.css"/>
+	<script type="text/javascript" src="PlayingCanvas.js"></script>
+</head>
+
+<body onload="canvasReady()">
+	<div style='top:60px; left:820px; z-index:5;'>
+		<input type="button" value="new" onclick="newCanvas()"></input>
+		<input type="button" value="erase" onclick="eraseShape()"></input><br>
+		<input type="button" value="copy&paste" onclick="copyShape()" style="width: 134px"></input><br>
+		<input type="radio" name="radioTool" value="move" id="moveRadio">move</input>
+		<input type="radio" name="radioTool" value="resize" id="resizeRadio">resize</input>
+		<br>
+		Tool<br>
+		<select id='tool'>
+		<option value=' '>---------------</option>
+		<option value='line' selected>line</option>
+		<option value='triangle'>triangle</option>
+		<option value='rectangle'>rectangle</option>
+		<option value='selector'>selector</option>
+		</select><br>
+
+		Outline Color<br>
+		<select id='outlineColor'>
+		<option value=' '>---------------</option>
+		<option value='black' selected>black</option>
+		<option value='white'>white</option>
+		<option value='red'>red</option>
+		<option value='blue'>blue</option>
+		<option value='green'>green</option>
+		<option value='yellow'>yellow</option>
+		<option value='aqua'>aqua</option>
+		<option value='magenta'>magenta</option>
+		</select><br>
+		Outline width<br>
+		<select id='outlineWidth'>
+		<option value=' '>---------------</option>
+		<option value='1'>thin</option>
+		<option value='3' selected>normal</option>
+		<option value='5'>bold</option>
+		</select><br>
+		Fill Color<br>
+		<select id='fillColor'>
+		<option value=' '>---------------</option>
+		<option value='black'>black</option>
+		<option value='white' selected>white</option>
+		<option value='red'>red</option>
+		<option value='blue'>blue</option>
+		<option value='green'>green</option>
+		<option value='yellow'>yellow</option>
+		<option value='aqua'>aqua</option>
+		<option value='magenta'>magenta</option>
+		</select>
+	</div>
+
+	<div style='top:320px; left:830px; z-index:4;'>
+		<input type="image" name="color" src="img/color.png"/>
+	</div>
+	<div style='top:50px; left:800px; z-index:4;'>
+		<img src="img/board.png"/>
+	</div>
+	<div style='top:0px; left:0px; z-index:3;'>
+		<canvas id="canvas" width="750" height="620"></canvas>
+	</div>
+	<div style='z-index:2;'>
+		<img src="img/canvas.png">
+	</div>
+	<div style='top:25px; left:700px; z-index:1;'>
+		<img src="img/palette.png">
+	</div>
+</body>
+</html>

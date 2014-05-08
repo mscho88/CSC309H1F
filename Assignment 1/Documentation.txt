@@ -1,0 +1,139 @@
+Stduent1 : Jisoo Lee(994584927)
+Student2 : MinSu Kevin Cho(996662543)
+
+  <script type="text/javascript"> 
+
+	  function Shape(canvas, startX, startY, endX, endY, outlineColor, outlineWidth, fillColor, shapeName){
+	  // This is a mother class for the Line, Triangle and Rectangle.
+	  // It holds a getter and setter functions or those inherited
+	  // class' elements.
+	  }
+
+	  function Line(canvas, startX, startY, endX, endY, outlineColor, outlineWidth, shapeName){
+	  // Line class inherites Shape so that this can use common
+	  // property and moethods. As well, the class contains
+	  // basic elements and methods that a line to be drawn.
+	  // Especially for lineTest method, it's calculated from the
+	  // line function that passes through the end points of the line.
+	  }
+
+	  Line.prototype = new Shape();
+	  Line.prototype.constructor = Line;
+
+	  function Triangle(canvas, startX, startY, endX, endY, outlineColor, outlineWidth, fillColor, shapeName){
+	  // Triangle class inherites Shape so that this can use common
+	  // property and moethods. As well, the class contains
+	  // basic elements and methods that a line to be drawn.
+	  // Especially for triaTest method, it's calculated from three
+	  // lines that compose a triangle where the mouse click is
+	  // inside of the triangle.
+	  }
+
+	  Triangle.prototype = new Shape();
+	  Triangle.prototype.constructor = Triangle;
+
+	  function Rectangle(canvas, startX, startY, endX, endY, outlineColor, outlineWidth, fillColor, shapeName){
+	  // Rectangle class inherites Shape so that this can use common
+	  // property and moethods. As well, the class contains
+	  // basic elements and methods that a line to be drawn.
+	  // Especially for rectTest method, it's calculated from the
+	  // four points of the rectangle.
+	  }
+
+	  Rectangle.prototype = new Shape();
+	  Rectangle.prototype.constructor = Rectangle;
+
+	  window.canvasReady = function(){
+	  // When the window is opened, it draws canvas and context to
+	  // draw shapes. It also contains action listener of user's
+	  // mouse click and movement.
+		  
+		  // This JQuery line allows outlineColor to be changed
+		  // from select tag in html
+		  $("#outlineColor").change(function(){
+			  outlineColor = $("#outlineColor option:selected").val();
+			  if(tool == "selector"){
+				  curSelected.setOutlineColor($("#outlineColor option:selected").val());
+				  drawShapes();
+			  }
+		  });
+
+		  // This JQuery line allows outlineWidth to be changed
+		  // from select tag in html
+		  $("#outlineWidth").change(function(){
+			  outlineWidth = $("#outlineWidth option:selected").val();
+			  if(tool == "selector"){
+				  curSelected.setTempWidth($("#outlineWidth option:selected").val());
+				  drawShapes();
+			  }
+		  });
+
+		  // This JQuery line allows fillColor to be changed
+		  // from select tag in html
+		  $("#fillColor").change(function(){
+			  fillColor = $("#fillColor option:selected").val();
+			  if(tool == "selector"){
+				  curSelected.setFillColor($("#fillColor option:selected").val());
+				  drawShapes();
+			  }
+		  });
+	  };
+
+	  
+	  function testHitHelper(i){
+	  // A helper function of testHit. This method helps testHit to
+	  // build pastSelected and curSelected elements.
+	  }
+
+	  function testHit(event){
+	  // According to those three different shapes, this reads the user's mouse click
+	  // and allows the user select a shape to modify.
+	  }
+
+	  function startDrawing(event){
+	  // Saving the exact point that of start clicking the mouse for drawing shapes.
+	  // This point will be the starting point of the shape.
+	  // Setting the variable isDraw be true that declare the user starts drawing.
+	  }
+
+	  function nowDrawing(event){
+	  // Drawing Line, Triangle, or Rectangle that the user choose while dragging the
+	  // mouse. If there was/were the previous shapes, then executing drawShapes()
+	  // function that iteratively clear the canvas and draw the shapes previously 
+	  // existed. Make sure that isDraw is ture status. This also controls that
+	  // move shapes and resize shape based on how the user uses mouse.
+	  }
+
+	  function stopDrawing(event){
+	  // Finishes drawing when the user realize the mouse button. At the same time,
+	  // the method pushes the drawn shape to an Array. Also, this method controls
+	  // movement of a shape and modification of its size.
+	  }
+
+	  var newCanvas = function(){
+	  // Clearing all the shapes on the canvas as well as the shapes array.
+	  };
+
+	  var drawShapes = function(){
+	  // Clearing and Drawing the previously existing shapes which on the shapes array.
+	  };
+
+	  var copyShape = function(){
+	  // This method simply copys a shape that the user selects where
+	  // the coordinate is 10 pixels from each side of the original point.
+	  }
+	  var eraseShape = function(){
+	  // Erasing the shape from the canvas as well as the shapes array.
+	  };
+  </script>
+
+  This program allows a user can easily draw Line(s), Triangle(s) and Rectangle(s) on the canvas 
+  by just select a shape from the Tool option. Also, the user can choose specific colors for the
+  outlining or filling shape from diversity of eight colors, and there are three thickness for
+  the outline width. User is able to modify the previously drawn shapes in the middle of adding
+  new shapes, by selecting each shape and changing the status; erasing as pressing the 'erase 
+  button', copying and pasting the shape as pressing the 'copy button', and changing the properties 
+  such as outline width,outline color, and fill color. Furthermore, user can moving or resizing 
+  shapes by dragging the shape after choosing one of them in radio button. 
+  The 'new button' brings a clear canvas. This Canvas is super user friendly.
+  
